@@ -16,10 +16,8 @@ export class CampaignComponent implements OnInit {
   campaigns: FirebaseListObservable<any[]>;
   campaignType: string = "Medical";
   currentRoute: string = this.router.url;
-  header: string ="test";
+  header: string =" ";
 
-
-  campaignToDisplay
 
   constructor(
     private route: ActivatedRoute,
@@ -32,20 +30,19 @@ export class CampaignComponent implements OnInit {
         this.header= "Medical Campaign";
       }else if(url == "/Business"){
         this.header= "Business Campaign";
-      }
+      }else if(url == "/campaign")
+      this.header = "All Campaign";
     }
 
   ngOnInit() {
    this.showHeading (this.currentRoute);
 
-    this.campaigns = this.campaignService.getCampaignByType("Business");
-    // this.campaigns = this.campaignService.getCampaignByType("Medical");
-    // this.route.params.forEach((urlParameters) => {
-    //   this.campaignType = urlParameters['id/campaignType'];
-    // });
-    // this.campaignToDisplay = this.campaignService.getCampaignByType(this.campaignType);
-    // console.log(this.campaignService.getCampaignByType("Medical"));
-
+    this.campaigns = this.campaignService.getCampaigns();
   }
+
+  goToDetailPage(clickedCampaign) {
+   this.router.navigate(['campaigns', clickedCampaign.$key]);
+   console.log(clickedCampaign);
+ };
 
 }

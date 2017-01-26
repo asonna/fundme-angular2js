@@ -9,13 +9,24 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 @Component({
   selector: 'app-campaign-details',
   templateUrl: './campaign-details.component.html',
-  styleUrls: ['./campaign-details.component.css']
+  styleUrls: ['./campaign-details.component.css'],
+  providers: [CampaignService]
 })
 export class CampaignDetailsComponent implements OnInit {
+  campaignId: string = null;
+  campaignToDisplay;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private campaignService: CampaignService
+  ) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.campaignId = urlParameters['id'];
+    });
+    this.campaignToDisplay = this.campaignService.getCampaignById(this.campaignId);
   }
 
 }

@@ -14,11 +14,8 @@ export class CampaignService {
     return this.campaigns;
   }
 
-  getCampaignByType(campaignType: string) {
-    if (campaignType === "Business") {
-      return this.campaigns;
-    }
-    // return this.angularFire.database.list('campaigns/id/' + campaignType);
-  // console.log(this.angularFire.database.list('campaigns'));
+  getCampaignById(campaignId: string) {
+    return this.angularFire.database.object('campaigns/' + campaignId);
   }
+  
 }

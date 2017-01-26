@@ -3,19 +3,19 @@
 <div *ngIf="('/'+campaign.campaignType) === this.currentRoute">
 <div class="panel panel-info">
 
-    <h3>
+    <h3 (click)="goToDetailPage(campaign)">
       {{campaign.title}}
     </h3>
     <h4>
       Targeted Amount: <span>{{campaign.amount}}</span>
     </h4>
-    <p>
+    <!-- <p>
       {{campaign.description}}
     </p>
     <p>
       <img src={{campaign.picture}} >
-    </p>
-    <p>
+    </p> -->
+    <p class="handwriting">
       {{campaign.name}}
     </p>
 
