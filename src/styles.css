@@ -7,3 +7,15 @@
   background-color: #f5f5f5;
   padding: 15px;
 }
+body, html {
+  background-color: darkred !important;
+  color: antiquewhite;
+}
+
+.container, .panel {
+  background-color: darkred !important;;
+  color: antiquewhite;
+}
+h4 span{
+  font-size: 24pt;
+}

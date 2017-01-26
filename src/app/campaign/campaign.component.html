@@ -1,3 +1,33 @@
-<p>
-  campaign works!
-</p>
+<h2>{{header}}</h2>
+<div *ngFor="let campaign of campaigns | async" >
+<div *ngIf="('/'+campaign.campaignType) === this.currentRoute">
+<div class="panel panel-info">
+
+    <h3>
+      {{campaign.title}}
+    </h3>
+    <h4>
+      Targeted Amount: <span>{{campaign.amount}}</span>
+    </h4>
+    <p>
+      {{campaign.description}}
+    </p>
+    <p>
+      <img src={{campaign.picture}} >
+    </p>
+    <p>
+      {{campaign.name}}
+    </p>
+
+</div>
+
+  </div>
+</div>
+
+<!-- <div>
+  <h3>{{(campaignToDisplay | async)?.title}}</h3>
+  <h4>{{(campaignToDisplay | async)?.name}}</h4>
+  <h4>{{(campaignToDisplay | async)?.amount}}</h4>
+  <p>{{(campaignToDisplay | async)?.description}}</p> -->
+  <!-- <img src={{(campaignToDisplay | async)?.picture}}/> -->
+<!-- </div> -->

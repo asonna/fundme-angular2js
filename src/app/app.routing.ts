@@ -15,6 +15,14 @@ const appRoutes: Routes = [
     path: 'campaign',
     component: CampaignComponent
   },
+  {
+    path: 'Medical',
+    component: CampaignComponent
+  },
+  {
+    path: 'Business',
+    component: CampaignComponent
+  },
 
   {
     path: 'campaigns/:id',

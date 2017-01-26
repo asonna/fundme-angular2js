@@ -19,5 +19,12 @@
     "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom.",
     "amount": "30,000",
     "picture": " "
+  }, {
+    "campaignType": "Business",
+    "title": "I need to develop my arm robot",
+    "name": "Franco Sarto",
+    "description": "A arm robot to help you with home chores.",
+    "amount": "20,000",
+    "picture": " "
   }]
 }
