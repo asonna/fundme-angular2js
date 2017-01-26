@@ -1,0 +1,23 @@
+{ "campaigns": [{
+    "campaignType": "Medical",
+    "title": "Help me survive cancer",
+    "name": "Pink Floyd",
+    "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom.",
+    "amount": "30,000",
+    "picture": "http://electronicsmaker.com/wp-content/uploads/2014/01/JESD_newsroom.jpg"
+    }, {
+    "campaignType": "Medical",
+    "title": "I need a new kidney",
+    "name": "Erica Mine",
+    "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom.",
+    "amount": "30,000",
+    "picture": " "
+      }, {
+    "campaignType": "Medical",
+    "title": "I need a major brain surgery",
+    "name": "Pascal Right",
+    "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom.",
+    "amount": "30,000",
+    "picture": " "
+  }]
+}
