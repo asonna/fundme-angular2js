@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { CampaignComponent } from './campaign/campaign.component';
+import { CampaignDetailsComponent } from './campaign-details/campaign-details.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -19,7 +22,10 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CampaignComponent,
+    CampaignDetailsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
