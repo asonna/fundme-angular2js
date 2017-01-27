@@ -21,4 +21,13 @@ export class CampaignService {
   addCampaign(newCampaign: Campaign) {
     this.campaigns.push(newCampaign);
   }
+
+  updateCampaign(localUpdatedCampaign){
+    var campaignEntryInFirebase = this.getCampaignById(localUpdatedCampaign.$key);
+    campaignEntryInFirebase.update({title: localUpdatedCampaign.title,
+                                name: localUpdatedCampaign.name,
+                                amount: localUpdatedCampaign.amount,
+                                picture: localUpdatedCampaign.picture,
+                                description: localUpdatedCampaign.description});
+  }
 }

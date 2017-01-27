@@ -1,5 +1,32 @@
 <h2>{{header}}</h2>
 <div *ngFor="let campaign of campaigns | async" >
+  <div *ngIf="('/campaign') === this.currentRoute">
+
+    <h3 (click)="goToDetailPage(campaign)">
+      {{campaign.title}}
+    </h3>
+    <h4>
+      Targeted Amount: <span>{{campaign.amount}}</span>
+    </h4>
+
+    <p class="handwriting">
+      {{campaign.name}}
+    </p>
+
+  </div>
+  <div *ngIf="('/admin') === this.currentRoute">
+    <h3 (click)="goToDetailPage(campaign)">
+      {{campaign.title}}
+    </h3>
+    <h4>
+      Targeted Amount: <span>{{campaign.amount}}</span>
+    </h4>
+
+    <p class="handwriting">
+      {{campaign.name}}
+    </p>
+
+  </div>
 <div *ngIf="('/'+campaign.campaignType) === this.currentRoute">
 <div class="panel panel-info">
 
@@ -31,3 +58,9 @@
   <p>{{(campaignToDisplay | async)?.description}}</p> -->
   <!-- <img src={{(campaignToDisplay | async)?.picture}}/> -->
 <!-- </div> -->
+<!-- <div>
+  <app-medical></app-medical>
+</div>
+<div>
+  <app-business></app-business>
+</div> -->
