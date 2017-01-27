@@ -14,7 +14,7 @@ body, html {
 }
 
 .container, .panel {
-  background-color: darkred !important;;
+  background-color: darkred !important;
   color: antiquewhite;
 }
 h4 span{
@@ -24,5 +24,14 @@ h4 span{
 .handwriting{
   font-family: 'Dancing Script', cursive;
   font-size: 14pt;
-  
+
+}
+.space{
+ margin-bottom: 15px !important;
+ /*border:2px solid black;*/
+ overflow: auto;
+}
+
+.space input, .space textarea {
+  color: black;
 }

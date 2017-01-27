@@ -17,5 +17,8 @@ export class CampaignService {
   getCampaignById(campaignId: string) {
     return this.angularFire.database.object('campaigns/' + campaignId);
   }
-  
+
+  addCampaign(newCampaign: Campaign) {
+    this.campaigns.push(newCampaign);
+  }
 }
